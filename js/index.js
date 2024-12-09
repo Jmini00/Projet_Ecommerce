@@ -1,7 +1,7 @@
 /**
  * Sélectionner et affiche les produits
  */
-fetch('https://fakestoreapi.com/products?limit=16')
+fetch('https://fakestoreapi.com/products')
     .then(response => response.json())
     .then(products => {
         const grid = document.querySelector('#products-grid')

@@ -12,9 +12,8 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
-
         <script src="js/menu.js" defer></script>
-        <script src="js/product.js" defer></script>
+        <script src="js/users.js" defer></script>
     </head>
     <body>
         <!-- Navigation-->
@@ -27,10 +26,15 @@
                     <form class="d-flex">
                         <button class="btn btn-outline-dark" type="submit">
                             <i class="bi-cart-fill me-1"></i>
-                            Cart
+                            Panier
                             <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
                         </button>
                     </form>
+                </div>
+                <div class="d-flex px-4">
+                    <a class="btn btn-outline-danger" href="admin.html">
+                        Administrateur
+                    </a>
                 </div>
             </div>
         </nav>
@@ -46,9 +50,8 @@
         <!-- Section-->
         <section class="py-5">
             <div class="container px-4 px-lg-5 mt-5">
-                <div class="gx-4 gx-lg-5" id="products-grid">
-
-                </div>
+                <h2>Liste utilisateurs</h2>
+                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-xl-3 justify-content-center" id="users-grid"></div>
             </div>
         </section>
         <!-- Footer-->
@@ -63,18 +66,35 @@
             </li>
         </template>
 
-        <!-- Template pour les détails du produit -->
-        <template id="product-template">
-            <img
-                    class="image"
-                    src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
-                    alt="..."
-                    style="height: 250px; object-fit: cover"
-            />
-            <h5 class="title"></h5>
-            <p class="price"></p>
-            <p class="description"></p>
-            <p class="category"></p>
+        <!-- Template pour les users -->
+        <template id="user-template">
+            <div class="col-4 mb-5">
+                <div class="card h-60">
+                    <!-- User image-->
+                    <img
+                         class="card-img-top"
+                         src="assets/img/test.webp"
+                         alt="..."
+                         style="height: 150px; object-fit: cover"
+
+                    />
+                    <!-- User details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">Fancy Product</h5>
+                            <!-- Product price-->
+                            <span class="username">$40.00 - $80.00</span>
+                        </div>
+                    </div>
+                    <!-- User actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center">
+                            <a class="btn btn-outline-dark mt-auto" href="#">View options</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </template>
     </body>
 </html>

@@ -14,7 +14,8 @@
         <link href="css/styles.css" rel="stylesheet" />
 
         <script src="js/menu.js" defer></script>
-        <script src="js/product.js" defer></script>
+        <script src="js/user.js" defer></script>
+
     </head>
     <body>
         <!-- Navigation-->
@@ -46,7 +47,7 @@
         <!-- Section-->
         <section class="py-5">
             <div class="container px-4 px-lg-5 mt-5">
-                <div class="gx-4 gx-lg-5" id="products-grid">
+                <div class="gx-4 gx-lg-5" id="users-grid">
 
                 </div>
             </div>
@@ -63,18 +64,20 @@
             </li>
         </template>
 
-        <!-- Template pour les détails du produit -->
-        <template id="product-template">
+        <!-- Template pour les détails du user -->
+        <template id="user-template">
             <img
                     class="image"
-                    src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
+                    src="assets/img/test.webp"
                     alt="..."
                     style="height: 250px; object-fit: cover"
             />
             <h5 class="title"></h5>
-            <p class="price"></p>
-            <p class="description"></p>
-            <p class="category"></p>
+            <p class="username"></p>
+            <p class="password"></p>
+            <p class="usermail"></p>
+            <p class="address"></p>
+            <p class="phone"></p>
         </template>
     </body>
 </html>
