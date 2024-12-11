@@ -13,7 +13,7 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
         <script src="js/menu.js" defer></script>
-        <script src="js/users.js" defer></script>
+        <script src="js/admin.js" defer></script>
     </head>
     <body>
         <!-- Navigation-->
@@ -47,6 +47,7 @@
                 </div>
             </div>
         </header>
+
         <!-- Section-->
         <section class="py-5">
             <div class="container px-4 px-lg-5 mt-5">
@@ -54,6 +55,15 @@
                 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-xl-3 justify-content-center" id="users-grid"></div>
             </div>
         </section>
+
+        <!-- Section-->
+        <section class="py-5">
+            <div class="container px-4 px-lg-5 mt-5">
+                <h2>Liste commandes</h2>
+                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-xl-3 justify-content-center" id="carts-grid"></div>
+            </div>
+        </section>
+
         <!-- Footer-->
         <footer class="py-5 bg-dark">
             <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2023</p></div>
@@ -88,6 +98,31 @@
                         </div>
                     </div>
                     <!-- User actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center">
+                            <a class="btn btn-outline-dark mt-auto" href="#">View options</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <!-- Template pour les commandes -->
+        <template id="cart-template">
+            <div class="col-4 mb-5">
+                <div class="card h-60">
+                    
+                    <!-- Cart details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">Fancy Product</h5>
+                            <!-- Product price-->
+                            <span class="cart">$40.00 - $80.00</span>
+                            <p><small class="small"></small></p>
+                        </div>
+                    </div>
+                    <!-- Cart actions-->
                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                         <div class="text-center">
                             <a class="btn btn-outline-dark mt-auto" href="#">View options</a>
